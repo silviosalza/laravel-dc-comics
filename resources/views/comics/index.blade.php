@@ -22,11 +22,11 @@
                         <td>{{ $comic->title }}</td>
                         <td>{{ $comic->series }}</td>
                         <td>{{ $comic->description }}</td>
-                        {{-- <td>
-                            <a class="btn btn-success" href="{{ route('pastas.show', $pasta->id) }}">
-                                <i class="fa-solid fa-eye"></i>
+                        <td>
+                            <a class="btn btn-success" href="{{ route('comics.show', $comic->id) }}">
+                                Info
                             </a>
-                        </td> --}}
+                        </td>
                     </tr>
                 @endforeach
 
