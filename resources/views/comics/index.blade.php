@@ -3,9 +3,9 @@
 @section('content')
     <div class="container">
         <h2>I nostri fumetti</h2>
-        {{-- <div class="my-2 text-end">
-            <a href="{{ route('pastas.create') }}">Crea una nuova pasta</a>
-        </div> --}}
+        <div class="my-2 text-end">
+            <a href="{{ route('comics.create') }}">Inserisci nuovo fumetto</a>
+        </div>
         <table class="table">
             <thead>
                 <tr>
