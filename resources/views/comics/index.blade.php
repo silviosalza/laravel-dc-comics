@@ -4,7 +4,7 @@
     <div class="container">
         <h2>I nostri fumetti</h2>
         <div class="my-2 text-end">
-            <a href="{{ route('comics.create') }}">Inserisci nuovo fumetto</a>
+            <a class="btn btn-primary" href="{{ route('comics.create') }}">Inserisci nuovo fumetto</a>
         </div>
         <table class="table">
             <thead>
@@ -26,7 +26,7 @@
                             <a class="btn btn-success" href="{{ route('comics.show', $comic->id) }}">
                                 Info
                             </a>
-                            <a class="btn btn-secondary" href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                            <a class="btn btn-warning" href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
                             <form class="d-inline-block" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                                 @method('DELETE')
                                 @csrf
