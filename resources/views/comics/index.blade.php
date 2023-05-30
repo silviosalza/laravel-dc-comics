@@ -26,6 +26,14 @@
                             <a class="btn btn-success" href="{{ route('comics.show', $comic->id) }}">
                                 Info
                             </a>
+                            <a href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
+                            <form class="d-inline-block" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit" class="btn btn-danger">
+                                    Elimina
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
