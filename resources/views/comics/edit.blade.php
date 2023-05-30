@@ -42,7 +42,7 @@
                 <textarea class="form-control" name="description" id="description" rows="3">{{ $comic->description }}"</textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Invia</button>
+            <button type="submit" class="btn btn-secondary">Invia</button>
         </form>
     </div>
 @endsection
