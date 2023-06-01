@@ -9,6 +9,16 @@
 
         <h2>Modifica il fumetto: {{ $comic->title }}</h2>
 
+        @if ($errors->any())
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>
+                    {{$error}}
+                </li>
+                @endforeach
+            </ul>
+        @endif
+
         <form action="{{ route('comics.update', $comic->id) }}" method="POST">
             @method('PUT')
             @csrf
