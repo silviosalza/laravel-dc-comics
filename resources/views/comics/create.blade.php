@@ -3,6 +3,15 @@
 @section('content')
     <div class="container">
         <h2>Inserisci nuovo fumetto</h2>
+        @if ($errors->any())
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>
+                    {{$error}}
+                </li>
+                @endforeach
+            </ul>
+        @endif
 
         <form action="{{ route('comics.store') }}" method="POST">
             @csrf
